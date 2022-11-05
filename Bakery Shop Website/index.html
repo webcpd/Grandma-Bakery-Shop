@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Filter</title>
+	<meta name="creator" content="Jahfar Tahiri">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header id="header">
+		<nav id="header-nav">
+			<a id="navbar-brand" href="#"><img src="img/logo.svg" alt="Small Doughnut"></a>
+			<div id="navbar-info">
+				<ul id="navbar-nav">
+					<li class="navbar-nav-list"><a class="navbar-nav-link" href="#">Home</a></li>
+					<li class="navbar-nav-list"><a class="navbar-nav-link" href="#">About</a></li>
+					<li class="navbar-nav-list"><a class="navbar-nav-link" href="#">Store</a></li>
+				</ul>
+				<div id="phone-info">
+					<i class="fas fa-phone"></i>
+					<p>+ 123 456 789</p>
+				</div>
+				<div id="cart-info">
+					<i class="fas fa-shopping-cart"></i>
+					<p><span id="number-of-items-in-cart">0</span> Items - $<span id="total-price1">00</span></p>
+				</div>
+			</div>
+		</nav>
+		<div id="banner">
+			<h1>Welcome to <span style="font-size: 1.8em; color: var(--mainPink)">Grandma's</span></h1>
+			<a style="text-decoration: none;" href="#store"><button type="button">EXPLORE</button></a>
+		</div>
+	</header>
+	<div class="cart">
+		<div id="cart-list"></div>
+		<div id="total"><span>Total</span><span>$ <span id="total-price2">00</span></span></div>
+	</div>
+	</div>
+	<section id="about">
+		<div id="about-text">
+			<h1>About <span style="font-size: 1.8em; color: var(--mainPink)">Us</span></h1>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, aliquam voluptas beatae vitae expedita consectetur nesciunt quia deserunt asperiores facere fuga dicta fugiat corrupti et omnis porro at dolorum! Ad!</p>
+			<a style="text-decoration: none;" href="#store"><button type="button">EXPLORE</button></a>
+		</div>
+		<img id="about-img" src="img/sweets-1.jpeg">
+	</section>
+	<section id="store">
+		<h1>Our <span style="font-size: 1.8em; color: var(--mainPink)">Store</span></h1>
+		<div id="filter-button-container">
+			<button type="button" data-filter="all">ALL</button>
+			<button type="button" data-filter="cakes">CAKES</button>
+			<button type="button" data-filter="cupcakes">CUPCAKES</button>
+			<button type="button" data-filter="sweets">SWEETS</button>
+			<button type="button" data-filter="doughnuts">DOUGHNUTS</button>
+		</div>
+		<div id="search-box-container">
+			<i id="search-icon" class="fas fa-search"></i><input id="search-box-input" type="text" placeholder="item...." data-search-box>
+		</div>
+		<div id="store-items-container" data-store-items-container>
+			<div class="card" data-item="sweets">
+				<img src="img/sweets-1.jpeg" alt data-store-bakery-images>
+				<div class="name-and-price"><span>Sweets Item</span><span>$ 5</span></div>
+			</div>
+			<div class="card" data-item="cupcakes">
+				<img src="img/cupcake-1.jpeg" alt data-store-bakery-images>
+				<div class="name-and-price"><span>Cupcake Item</span><span>$ 5</span></div>
+			</div>
+			<div class="card" data-item="cakes">
+				<img src="img/cake-1.jpeg" alt data-store-bakery-images>
+				<div class="name-and-price"><span>Cake Item</span><span>$ 5</span></div>
+			</div>
+			<div class="card" data-item="doughnuts">
+				<img src="img/doughnut-1.jpeg" alt data-store-bakery-images>
+				<div class="name-and-price"><span>Doughnut Item</span><span>$ 5</span></div>
+			</div>
+			<div class="card" data-item="sweets">
+				<img src="img/sweets-2.jpeg" alt data-store-bakery-images>
+				<div class="name-and-price"><span>Sweets Item</span><span>$ 10</span></div>
+			</div>
+			<div class="card" data-item="cupcakes">
+				<img src="img/cupcake-2.jpeg" alt data-store-bakery-images>
+				<div class="name-and-price"><span>Cupcake Item</span><span>$ 10</span></div>
+			</div>
+			<div class="card" data-item="cakes">
+				<img src="img/cake-2.jpeg" alt data-store-bakery-images>
+				<div class="name-and-price"><span>Cake Item</span><span>$ 10</span></div>
+			</div>
+			<div class="card" data-item="doughnuts">
+				<img src="img/doughnut-2.jpeg" alt data-store-bakery-images>
+				<div class="name-and-price"><span>Doughnut Item</span><span>$ 10</span></div>
+			</div>
+			<div class="card" data-item="sweets">
+				<img src="img/sweets-3.jpeg" alt data-store-bakery-images>
+				<div class="name-and-price"><span>Sweets Item</span><span>$ 15</span></div>
+			</div>
+			<div class="card" data-item="cupcakes">
+				<img src="img/cupcake-3.jpeg" alt data-store-bakery-images>
+				<div class="name-and-price"><span>Cupcake Item</span><span>$ 15</span></div>
+			</div>
+			<div class="card" data-item="cakes">
+				<img src="img/cake-3.jpeg" alt data-store-bakery-images>
+				<div class="name-and-price"><span>Cake Item</span><span>$ 15</span></div>
+			</div>
+			<div class="card" data-item="doughnuts">
+				<img src="img/doughnut-3.jpeg" alt data-store-bakery-images>
+				<div class="name-and-price"><span>Doughnut Item</span><span>$ 15</span></div>
+			</div>
+		</div>
+		<div class="modal" data-popup-modal-container>
+			<div class="modal-content" data-modal-content>
+				<i id="modal-left-arrow" class="fas fa-caret-left modal-arrow" data-modal-left-arrow></i>
+				<i id="modal-right-arrow" class="fas fa-caret-right modal-arrow" data-modal-right-arrow></i>
+				<i class="fas fa-window-close close-button" data-modal-close-button></i>
+				<img src="" style="width: 100%; height: 100%" alt="Store Item Image" alt="store item" data-modal-image>
+			</div>
+		</div>
+	</section>
+	<script src="script.js"></script>
+</body>
+</html>

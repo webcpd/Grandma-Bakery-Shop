@@ -1,0 +1,347 @@
+:root {
+	--mainPink: #ef7998;
+	--mainYellow: rgb(249, 228, 148);
+	--mainWhite: #fff;
+	--mainBlack: #000;
+	--yellowTrans: rgba(249, 228, 148, 0.5);
+	--mainGrey: rgb(238, 238, 238);
+}
+* {
+	box-sizing: border-box;
+}
+html,
+body {
+	max-width: 100%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+body {
+	background: linear-gradient(var(--yellowTrans), var(--yellowTrans)),
+		url(img/headerBcg.jpeg) center/cover fixed no-repeat;
+	font-family: "Kaushan Script", cursive;
+	margin: 0;
+	color: var(--mainBlack);
+}
+a {
+	color: inherit;
+}
+.navbar-nav-link {
+	text-decoration: none;
+	color: var(--mainPink);
+	transition: 0.5s;
+}
+.navbar-nav-link:hover {
+	color: var(--mainBlack);
+}
+.navbar-nav-list {
+	display: inline;
+	margin-left: 1rem;
+}
+.card {
+	outline: 1px solid #ddd;
+	border-radius: 3px;
+	overflow: hidden;
+}
+.name-and-price {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 20px;
+	font-size: 1.3em;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+.name-and-price > * {
+	pointer-events: none;
+}
+.name-and-price:hover {
+	color: white;
+	text-shadow: 5px 5px 10px black, -5px 5px 10px black, -5px -5px 10px black,
+		5px -5px 10px black;
+}
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+	position: relative;
+	margin: 5% auto;
+	width: 82%;
+	height: 80%;
+	border-radius: 3px;
+}
+.modal-arrow {
+	position: absolute;
+	top: 50%;
+	font-size: 4em;
+	color: var(--mainPink);
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.close-button {
+	color: var(--mainPink);
+	width: 2.5rem;
+	height: 2.5rem;
+	text-align: center;
+	position: absolute;
+	top: -10%;
+	right: 0%;
+	font-size: 2.5rem;
+	border-radius: 3px;
+	transition: 0.5s;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.close-button:hover,
+.modal-arrow:hover {
+	color: var(--mainYellow);
+}
+
+#header {
+	height: 100vh;
+}
+
+#header-nav {
+	width: 100vw;
+	background-color: var(--mainWhite);
+	height: 11vh;
+	display: flex;
+}
+#navbar-brand {
+	margin-left: 2rem;
+	display: flex;
+	align-items: center;
+}
+
+#navbar-info {
+	display: flex;
+	align-items: center;
+}
+
+#navbar-nav {
+	list-style-type: none;
+	padding-left: 12rem;
+	font-size: 1.5em;
+}
+#phone-info {
+	width: 9em;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-left: 25vw;
+}
+#cart-info {
+	width: 10em;
+	height: 2.5em;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-left: 9vw;
+	padding: 0px 10px;
+	border: 1px solid black;
+	border-radius: 5px;
+	cursor: pointer;
+	outline: none;
+}
+#cart-info:hover {
+	color: var(--mainWhite);
+	background-color: var(--mainPink);
+	border-color: var(--mainPink);
+}
+
+#banner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+#banner h1 {
+	color: var(--mainWhite);
+	font-size: 2.5em;
+}
+#banner button {
+	font-size: 1.5em;
+	font-family: "Kaushan Script", cursive;
+	background-color: transparent;
+	padding: 6px 20px;
+	margin-top: -1rem;
+	border: 3px solid var(--mainBlack);
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.2s;
+}
+#banner button:hover {
+	background-color: var(--mainBlack);
+	color: var(--mainPink);
+}
+
+#about {
+	height: 85vh;
+	background-color: var(--mainWhite);
+	padding: 0 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+#about-text {
+	width: 30vw;
+}
+#about h1 {
+	color: var(--mainBlack);
+	font-size: 2.5em;
+}
+#about p {
+	color: #6c757d;
+}
+#about button {
+	font-size: 1em;
+	font-family: "Kaushan Script", cursive;
+	background-color: transparent;
+	padding: 5px 15px;
+	border: 1px solid var(--mainBlack);
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.2s;
+}
+#about button:hover {
+	background-color: var(--mainBlack);
+	color: var(--mainPink);
+}
+#about img {
+	max-width: 32rem;
+	height: auto;
+	transition: all 0.5s ease;
+}
+#about img:hover {
+	transform: scale(1.15);
+}
+
+#store {
+	background-color: var(--mainGrey);
+	padding: 2rem 3rem;
+	text-align: center;
+}
+#store h1 {
+	color: var(--mainBlack);
+	font-size: 2.5em;
+}
+#filter-button-container {
+	margin: 0 auto;
+	width: 60vw;
+	display: flex;
+	justify-content: space-around;
+}
+#store button {
+	font-size: 1em;
+	font-family: "Kaushan Script", cursive;
+	background-color: transparent;
+	padding: 5px 15px;
+	border: 1px solid var(--mainBlack);
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.2s;
+}
+#store button:hover {
+	background-color: var(--mainBlack);
+	color: var(--mainPink);
+}
+#store button:focus {
+	outline-color: var(--mainPink);
+}
+
+#search-box-container {
+	margin: 1rem;
+}
+#search-icon {
+	background-color: var(--mainPink);
+	padding: 12px;
+	border-radius: 3px;
+}
+#search-box-input {
+	width: 40vw;
+	height: 40px;
+	font-size: 1em;
+	border: 0.5px solid gray;
+	border-radius: 0 3px 3px 0;
+}
+#store-items-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 35px;
+	margin: 40px auto 40px auto;
+	width: 85vw;
+}
+#store-items-container div {
+	background-color: var(--mainWhite);
+	text-align: center;
+	border-radius: 3px 3px 0 0;
+}
+#store-items-container div img {
+	width: 100%;
+	border-radius: 3px 3px 0 0;
+	transition: all 0.5s ease;
+	cursor: pointer;
+}
+#store-items-container div img:hover {
+	transform: scale(1.1);
+}
+
+#modal-left-arrow {
+	left: -5%;
+}
+#modal-right-arrow {
+	right: -5%;
+}
+
+.cart {
+	width: 0;
+	padding: 30px 20px;
+	background-color: rgba(255, 255, 255, 0.6);
+	position: absolute;
+	top: 11%;
+	right: -10%;
+	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+}
+.cart-item {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 25px 0;
+}
+.cart-item img {
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+}
+.cart-item p {
+	margin: 0;
+}
+.cart-item i {
+	color: var(--mainPink);
+	cursor: pointer;
+	font-size: 1.2rem;
+	transition: all 1s ease;
+}
+.cart-item i:hover {
+	color: black;
+}
+
+#total {
+	display: flex;
+	justify-content: space-around;
+	font-size: 1.4rem;
+	margin-top: 50px;
+}
+.show {
+	width: 18rem;
+	right: 0;
+	transform: rotateY(-360deg);
+}
